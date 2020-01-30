@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fast-api 
+  name: fast-api-app 
 spec:
   replicas: 1
   revisionHistoryLimit: 3
@@ -14,7 +14,7 @@ spec:
         app: fast-api-app
     spec:
       containers:
-              - image: docker.io/danielpivotal/fast-api:0.1
-        name: fast-api
+      - image: docker.io/danielpivotal/fast-api:0.1
+        name: fast-api-app
         ports:
         - containerPort: 80
